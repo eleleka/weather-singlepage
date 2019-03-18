@@ -16,14 +16,13 @@ options.isProduction = isProduction;
 options.rootPath = {
   project: __dirname + '/',
   src: __dirname + '/src/',
-  dist: __dirname + '/'
 };
 
 options.theme = {
   name: 'weather-singlepage',
   root: options.rootPath.theme,
   sass: options.rootPath.src + 'scss/',
-  css: options.rootPath.dist
+  css: options.rootPath.project + 'css/'
 };
 
 options.sassFiles = [

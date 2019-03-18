@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import './css/App.css';
 
 import Form from './components/Form';
 import Weather from './components/Weather';
