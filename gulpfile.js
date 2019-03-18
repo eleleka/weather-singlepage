@@ -14,13 +14,13 @@ const {styles} = require('./gulp-tasks/styles');
 const {watch} = require('./gulp-tasks/watch');
 
 // If we need specific task in cli.
-exports.clean = clean;
+// exports.clean = clean;
 exports.lint = parallel(lintCss);
 exports.styles = series(cleanCss, styles);
 exports.watch = watch;
 
 exports.default = series(
   parallel(lintCss),
-  parallel(clean),
+  parallel(cleanCss),
   parallel(styles)
 );
