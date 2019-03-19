@@ -34,38 +34,38 @@ options.sassFiles = [
 ];
 
 // Svg sprite options.
-options.svgConfig = {
-  shape: {
-    dimension: {
-      maxWidth: 500,
-      maxHeight: 500,
-      transform: ['svgo']
-    },
-    id: {
-      separator: ''
-    }
-  },
-  mode: {
-    view: {
-      dest: './mixin/',
-      sprite: '../svg',
-      bust: true,
-      prefix: '@mixin svg-sprite--%s',
-      layout: 'diagonal',
-      mixin: true,
-      render: {
-        scss: {
-          dest: 'svg-sprite-mixins.scss',
-          template: options.rootPath.src + '/icons/_svg-sprite-template.scss'
-        }
-      },
-      example: true
-    }
-  },
-  "variables": {
-    scale: options.iconScale
-  }
-};
+// options.svgConfig = {
+//   shape: {
+//     dimension: {
+//       maxWidth: 500,
+//       maxHeight: 500,
+//       transform: ['svgo']
+//     },
+//     id: {
+//       separator: ''
+//     }
+//   },
+//   mode: {
+//     view: {
+//       dest: './mixin/',
+//       sprite: '../svg',
+//       bust: true,
+//       prefix: '@mixin svg-sprite--%s',
+//       layout: 'diagonal',
+//       mixin: true,
+//       render: {
+//         scss: {
+//           dest: 'svg-sprite-mixins.scss',
+//           template: options.rootPath.src + '/icons/_svg-sprite-template.scss'
+//         }
+//       },
+//       example: false
+//     }
+//   },
+//   "variables": {
+//     scale: options.iconScale
+//   }
+// };
 
 options.sass = {
   importer: magicImporter(),

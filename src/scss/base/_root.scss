@@ -23,6 +23,7 @@ html {
 body {
   @include spacing(min-width, 320px);
   @include font-size(14px);
+  background: $color-gradient-top;
   background: linear-gradient(135deg, $color-gradient-top, $color-gradient-bottom);
   line-height: 1.5;
   min-height: 100vh;
@@ -46,7 +47,7 @@ p {
 .container {
   @include spacing(max-width, 1176px);
   @include spacing(height, 680px);
-  @include padding(40px);
+  @include padding(32px 40px);
   @include margin(20px);
   background: $color-white;
   box-shadow: 0 0 15px rgba(0, 0, 0, .4);

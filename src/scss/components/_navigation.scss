@@ -1,3 +1,10 @@
-// .navigation {
-
-// }
+.navigation {
+  a {
+    @include spacing(width, 28px);
+    @include spacing(height, 28px);
+    @include margin-top(5px);
+    background: image-url('arrow_back.png') 0 0 no-repeat;
+    background-size: contain;
+    display: inline-block;
+  }
+}

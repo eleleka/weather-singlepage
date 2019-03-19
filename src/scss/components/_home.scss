@@ -8,14 +8,17 @@
 
 .search-form {
   @include spacing(max-width, 590px);
+  align-items: center;
+  display: flex;
   flex: 1 1 auto;
 
   .input-name-city {
-    @include font-size(50px);
+    @include font-size(48px);
     font-weight: weight('semibold');
     border: 0;
     border-bottom: 2px solid $color-main;
     color: $color-main;
+    flex: 1 1 auto;
     text-align: center;
 
     &::-webkit-input-placeholder {
@@ -35,9 +38,13 @@
   }
 
   .form-submit {
-    @include spacing(width, 55px);
-    @include spacing(height, 55px);
+    @include spacing(width, 30px);
+    @include spacing(height, 30px);
+    @include margin-left(-35px);
+    background: image-url('search.png') 0 0 no-repeat;
+    background-size: contain;
     border: 0;
+    flex: 0 0 auto;
     font-size: 0;
   }
 }

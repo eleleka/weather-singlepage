@@ -6,11 +6,11 @@
 const del = require('del');
 const options = require('../gulp-options');
 
-function clean() {
-  return del([
-    options.theme.svg + '/**/*'
-  ], {force: true});
-}
+// function cleanSvg() {
+//   return del([
+//     options.theme.svg + '/**/*'
+//   ], {force: true});
+// }
 
 function cleanCss() {
   return del([
@@ -18,5 +18,5 @@ function cleanCss() {
   ], {force: true});
 }
 
-exports.clean = clean;
+// exports.cleanSvg = cleanSvg;
 exports.cleanCss = cleanCss;
