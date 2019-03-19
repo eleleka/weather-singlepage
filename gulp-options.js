@@ -22,7 +22,9 @@ options.theme = {
   name: 'weather-singlepage',
   root: options.rootPath.theme,
   sass: options.rootPath.src + 'scss/',
-  css: options.rootPath.project + 'css/'
+  css: options.rootPath.src + 'css/',
+  icons: options.rootPath.src + 'icons/',
+  svg: options.rootPath.src + 'svg/'
 };
 
 options.sassFiles = [
@@ -30,6 +32,40 @@ options.sassFiles = [
   // Do not open Sass partials as they will be included as needed.
   '!' + options.theme.sass + '**/_*.scss'
 ];
+
+// Svg sprite options.
+options.svgConfig = {
+  shape: {
+    dimension: {
+      maxWidth: 500,
+      maxHeight: 500,
+      transform: ['svgo']
+    },
+    id: {
+      separator: ''
+    }
+  },
+  mode: {
+    view: {
+      dest: './mixin/',
+      sprite: '../svg',
+      bust: true,
+      prefix: '@mixin svg-sprite--%s',
+      layout: 'diagonal',
+      mixin: true,
+      render: {
+        scss: {
+          dest: 'svg-sprite-mixins.scss',
+          template: options.rootPath.src + '/icons/_svg-sprite-template.scss'
+        }
+      },
+      example: true
+    }
+  },
+  "variables": {
+    scale: options.iconScale
+  }
+};
 
 options.sass = {
   importer: magicImporter(),

@@ -1,3 +1,14 @@
-@import '~normalize.css';
 @import '~breakpoint-sass';
 @import '~typey';
+
+@import 'init/colors';
+@import 'init/fonts';
+@import 'init/image-url';
+@import 'init/variables';
+
+@import 'base/forms';
+@import 'base/root';
+
+@import 'components/home';
+@import 'components/weather';
+@import 'components/navigation';

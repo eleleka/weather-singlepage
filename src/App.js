@@ -5,7 +5,6 @@ import './css/App.css';
 import Form from './components/Form';
 import Weather from './components/Weather';
 import Error from './components/Error';
-import Navigation from './components/Navigation';
 
 const API_Key = '370ddf7f98161d511fa6ed6be348ec9d';
 
@@ -34,7 +33,7 @@ class App extends Component {
         temperature: data.list[0].main.temp,
         description: data.list[0].weather[0].description,
         icon: data.list[0].weather[0].icon,
-        error: ''
+        error: undefined
       });
     } else {
       this.setState({
@@ -91,11 +90,11 @@ class App extends Component {
     return (
       <BrowserRouter>
         <div className="container">
-          <Navigation />
           <Switch>
             <Route path='/' render={(props) => <Form {...props}
               updateCity={this.updateCity.bind(this)}
               getWeather={this.getWeather.bind(this)}
+              error={this.state.error}
             />} exact />
             <Route path='/weather' render={(props) => <Weather {...props}
               changeUnits={this.changeUnits.bind(this)}
@@ -104,7 +103,6 @@ class App extends Component {
               degree={this.state.degree}
               description={this.state.description}
               icon={this.state.icon}
-              error={this.state.error}
             />} />
             <Route component={Error} />
           </Switch>

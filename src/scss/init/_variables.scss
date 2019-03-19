@@ -1,0 +1,39 @@
+// Typey allows you to alter font weights site-wide with this map.
+$font-weight: (
+  black:            900,
+  extra-bold:       800,
+  bold:             700,
+  semibold:         600,
+  medium:           500,
+  normal:           400,
+  light:            300,
+  extra-light:      200,
+  thin:             100
+);
+
+// The font size set on the root html element.
+$base-font-size:    15px;
+
+// Output a horizontal grid to help with debugging typography.
+$typey-debug: false;
+
+// The length unit in which to output font size and margin values.
+// Supported values: px, em, rem.
+$base-unit:         'rem';
+
+// px fallbacks for rem units are needed for IE 8 and earlier.
+$rem-fallback:      false;
+
+// Breakpoints
+//
+// Use the `respond-to()` mixin to use named breakpoints. Documentation is
+// available in the [Breakpoint wiki
+// pages](https://github.com/at-import/breakpoint/wiki/Respond-To).
+@include add-breakpoint(xs, (320px, 'no-query' true));
+@include add-breakpoint(xs-max,    (max-width 767px, 'no-query' true));
+@include add-breakpoint(m, (768px, 'no-query' true));
+@include add-breakpoint(m-max,   (max-width 960px, 'no-query' true));
+@include add-breakpoint(l, (961px, 'no-query' true));
+@include add-breakpoint(l-between, (961px 1440px, 'no-query' true));
+@include add-breakpoint(l-max,  (max-width 1440px, 'no-query' true));
+@include add-breakpoint(xl, (1441px, 'no-query' true));

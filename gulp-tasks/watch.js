@@ -13,5 +13,9 @@ function watchFiles() {
     options.gulpWatchOptions,
     series(styles, reload)
   );
+  watch(
+    options.gulpWatchOptions,
+    series(reload)
+  );
 }
 exports.watch = series(watchFiles);

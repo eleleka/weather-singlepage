@@ -1,0 +1,222 @@
+%svg-common {
+	background-color: black;
+}
+
+@mixin svg-sprite--arrow_back {
+	
+	mask-position: 0 0;
+	mask: url("../svg-9dc086d6.svg#arrow_back") no-repeat;
+	mask-size: contain;
+}
+@mixin svg-sprite--arrow_back-dims {
+	width: spacing(24px);
+	height: spacing(24px);
+}
+
+@mixin svg-sprite--search {
+	
+	mask-position: 6.779661016949152% 6.779661016949152%;
+	mask: url("../svg-9dc086d6.svg#search") no-repeat;
+	mask-size: contain;
+}
+@mixin svg-sprite--search-dims {
+	width: spacing(24px);
+	height: spacing(24px);
+}
+
+@mixin svg-sprite--wi-cloud {
+	
+	mask-position: 13.793103448275861% 13.793103448275861%;
+	mask: url("../svg-9dc086d6.svg#wi-cloud") no-repeat;
+	mask-size: contain;
+}
+@mixin svg-sprite--wi-cloud-dims {
+	width: spacing(30px);
+	height: spacing(30px);
+}
+
+@mixin svg-sprite--wi-cloudy {
+	
+	mask-position: 22.413793103448278% 22.413793103448278%;
+	mask: url("../svg-9dc086d6.svg#wi-cloudy") no-repeat;
+	mask-size: contain;
+}
+@mixin svg-sprite--wi-cloudy-dims {
+	width: spacing(30px);
+	height: spacing(30px);
+}
+
+@mixin svg-sprite--wi-day-cloudy {
+	
+	mask-position: 31.03448275862069% 31.03448275862069%;
+	mask: url("../svg-9dc086d6.svg#wi-day-cloudy") no-repeat;
+	mask-size: contain;
+}
+@mixin svg-sprite--wi-day-cloudy-dims {
+	width: spacing(30px);
+	height: spacing(30px);
+}
+
+@mixin svg-sprite--wi-day-rain {
+	
+	mask-position: 39.6551724137931% 39.6551724137931%;
+	mask: url("../svg-9dc086d6.svg#wi-day-rain") no-repeat;
+	mask-size: contain;
+}
+@mixin svg-sprite--wi-day-rain-dims {
+	width: spacing(30px);
+	height: spacing(30px);
+}
+
+@mixin svg-sprite--wi-day-sunny {
+	
+	mask-position: 48.275862068965516% 48.275862068965516%;
+	mask: url("../svg-9dc086d6.svg#wi-day-sunny") no-repeat;
+	mask-size: contain;
+}
+@mixin svg-sprite--wi-day-sunny-dims {
+	width: spacing(30px);
+	height: spacing(30px);
+}
+
+@mixin svg-sprite--wi-fog {
+	
+	mask-position: 56.89655172413793% 56.89655172413793%;
+	mask: url("../svg-9dc086d6.svg#wi-fog") no-repeat;
+	mask-size: contain;
+}
+@mixin svg-sprite--wi-fog-dims {
+	width: spacing(30px);
+	height: spacing(30px);
+}
+
+@mixin svg-sprite--wi-night-alt-cloudy {
+	
+	mask-position: 65.51724137931035% 65.51724137931035%;
+	mask: url("../svg-9dc086d6.svg#wi-night-alt-cloudy") no-repeat;
+	mask-size: contain;
+}
+@mixin svg-sprite--wi-night-alt-cloudy-dims {
+	width: spacing(30px);
+	height: spacing(30px);
+}
+
+@mixin svg-sprite--wi-night-clear {
+	
+	mask-position: 74.13793103448276% 74.13793103448276%;
+	mask: url("../svg-9dc086d6.svg#wi-night-clear") no-repeat;
+	mask-size: contain;
+}
+@mixin svg-sprite--wi-night-clear-dims {
+	width: spacing(30px);
+	height: spacing(30px);
+}
+
+@mixin svg-sprite--wi-rain {
+	
+	mask-position: 82.75862068965517% 82.75862068965517%;
+	mask: url("../svg-9dc086d6.svg#wi-rain") no-repeat;
+	mask-size: contain;
+}
+@mixin svg-sprite--wi-rain-dims {
+	width: spacing(30px);
+	height: spacing(30px);
+}
+
+@mixin svg-sprite--wi-snow {
+	
+	mask-position: 91.37931034482759% 91.37931034482759%;
+	mask: url("../svg-9dc086d6.svg#wi-snow") no-repeat;
+	mask-size: contain;
+}
+@mixin svg-sprite--wi-snow-dims {
+	width: spacing(30px);
+	height: spacing(30px);
+}
+
+@mixin svg-sprite--wi-thunderstorm {
+	
+	mask-position: 100% 100%;
+	mask: url("../svg-9dc086d6.svg#wi-thunderstorm") no-repeat;
+	mask-size: contain;
+}
+@mixin svg-sprite--wi-thunderstorm-dims {
+	width: spacing(30px);
+	height: spacing(30px);
+}
+
+
+// TODO Rework it with #fragment or svgView#viewBox()
+// mask-image: url(../svg-9dc086d6.svg##{$name});
+@mixin svg-mixin-global($name, $breakpoint: false) {
+	@if $breakpoint == false {
+		mask: url("../svg-9dc086d6.svg") no-repeat;
+		mask-size: spacing(378px) spacing(378px);
+	}
+
+	@if $name == "arrow_back"{
+		mask-position: 0 0;
+		width: spacing(24px);
+		height: spacing(24px);
+	}
+	@if $name == "search"{
+		mask-position: 6.779661016949152% 6.779661016949152%;
+		width: spacing(24px);
+		height: spacing(24px);
+	}
+	@if $name == "wi-cloud"{
+		mask-position: 13.793103448275861% 13.793103448275861%;
+		width: spacing(30px);
+		height: spacing(30px);
+	}
+	@if $name == "wi-cloudy"{
+		mask-position: 22.413793103448278% 22.413793103448278%;
+		width: spacing(30px);
+		height: spacing(30px);
+	}
+	@if $name == "wi-day-cloudy"{
+		mask-position: 31.03448275862069% 31.03448275862069%;
+		width: spacing(30px);
+		height: spacing(30px);
+	}
+	@if $name == "wi-day-rain"{
+		mask-position: 39.6551724137931% 39.6551724137931%;
+		width: spacing(30px);
+		height: spacing(30px);
+	}
+	@if $name == "wi-day-sunny"{
+		mask-position: 48.275862068965516% 48.275862068965516%;
+		width: spacing(30px);
+		height: spacing(30px);
+	}
+	@if $name == "wi-fog"{
+		mask-position: 56.89655172413793% 56.89655172413793%;
+		width: spacing(30px);
+		height: spacing(30px);
+	}
+	@if $name == "wi-night-alt-cloudy"{
+		mask-position: 65.51724137931035% 65.51724137931035%;
+		width: spacing(30px);
+		height: spacing(30px);
+	}
+	@if $name == "wi-night-clear"{
+		mask-position: 74.13793103448276% 74.13793103448276%;
+		width: spacing(30px);
+		height: spacing(30px);
+	}
+	@if $name == "wi-rain"{
+		mask-position: 82.75862068965517% 82.75862068965517%;
+		width: spacing(30px);
+		height: spacing(30px);
+	}
+	@if $name == "wi-snow"{
+		mask-position: 91.37931034482759% 91.37931034482759%;
+		width: spacing(30px);
+		height: spacing(30px);
+	}
+	@if $name == "wi-thunderstorm"{
+		mask-position: 100% 100%;
+		width: spacing(30px);
+		height: spacing(30px);
+	}
+}

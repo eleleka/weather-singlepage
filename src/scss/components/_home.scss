@@ -1,0 +1,43 @@
+.home-wrapper {
+  align-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 100%;
+}
+
+.search-form {
+  @include spacing(max-width, 590px);
+  flex: 1 1 auto;
+
+  .input-name-city {
+    @include font-size(50px);
+    font-weight: weight('semibold');
+    border: 0;
+    border-bottom: 2px solid $color-main;
+    color: $color-main;
+    text-align: center;
+
+    &::-webkit-input-placeholder {
+      color: $color-placeholder;
+      text-align: center;
+    }
+
+    &::-moz-placeholder {  /* Firefox 19+ */
+      color: $color-placeholder;
+      text-align: center;
+    }
+
+    &:-ms-input-placeholder {
+      color: $color-placeholder;
+      text-align: center;
+    }
+  }
+
+  .form-submit {
+    @include spacing(width, 55px);
+    @include spacing(height, 55px);
+    border: 0;
+    font-size: 0;
+  }
+}

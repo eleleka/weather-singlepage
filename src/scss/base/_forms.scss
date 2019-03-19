@@ -1,0 +1,36 @@
+input[type='text'],
+input[type='search'] {
+  @include font-size(12px);
+  @include padding(12px 10px 13px);
+  background: $color-white;
+  border: 2px solid $color-main;
+  box-sizing: border-box;
+  box-shadow: none;
+  color: $color-main;
+  display: inline-block;
+  font-weight: weight('normal');
+  line-height: 1;
+  margin: 0;
+  max-width: 100%;
+  width: 100%;
+  // transition: all .2s ease-in-out;
+  -webkit-appearance: none;
+}
+
+input[type='submit'],
+input[type='button'] {
+  border: 0;
+}
+
+label {
+  @include font-size(16px);
+  @include padding-bottom(10px);
+  font-weight: weight('normal');
+  letter-spacing: .6px;
+  display: block;
+  position: relative;
+
+  .form-required {
+    color: $color-require;
+  }
+}
