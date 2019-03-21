@@ -23,8 +23,8 @@ options.theme = {
   root: options.rootPath.theme,
   sass: options.rootPath.src + 'scss/',
   css: options.rootPath.src + 'css/',
-  icons: options.rootPath.src + 'icons/',
-  svg: options.rootPath.src + 'svg/'
+  icons: options.rootPath.src + 'icons/'
+  // svg: options.rootPath.src + 'svg/'
 };
 
 options.sassFiles = [

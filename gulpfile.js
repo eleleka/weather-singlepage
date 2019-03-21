@@ -11,7 +11,7 @@ const {parallel, series} = require('gulp');
 const {cleanCss} = require('./gulp-tasks/clean');
 const {lintCss} = require('./gulp-tasks/lint');
 const {styles} = require('./gulp-tasks/styles');
-const {svg} = require('./gulp-tasks/svg-sprites');
+// const {svg} = require('./gulp-tasks/svg-sprites');
 const {watch} = require('./gulp-tasks/watch');
 
 // If we need specific task in cli.
@@ -25,6 +25,6 @@ exports.watch = watch;
 exports.default = series(
   parallel(lintCss),
   parallel(cleanCss),
-  parallel(svg),
+  // parallel(svg),
   parallel(styles)
 );
