@@ -1,0 +1,38 @@
+.current-position {
+  @include font-size(24px);
+  @include margin-top(30px);
+  font-weight: weight('medium');
+  line-height: 2.1;
+  text-align: center;
+
+  &::first-line {
+    @include font-size(20px);
+  }
+
+  span {
+    border-bottom: 1px dashed $color-main;
+    cursor: pointer;
+  }
+}
+
+.loading {
+  font-style: italic;
+  font-weight: weight('normal');
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+
+  .icon-svg {
+    animation: spin 2s alternate infinite;
+    fill: $color-main;
+    width: 32px;
+    height: 32px;
+    vertical-align: middle;
+  }
+}
+
+@keyframes spin {
+  0% { transform: scale(1) rotate(0deg); }
+  50% { transform: scale(1) rotate(80deg); }
+  100% { transform: scale(1) rotate(-180deg); }
+}

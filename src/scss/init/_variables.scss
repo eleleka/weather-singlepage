@@ -29,11 +29,4 @@ $rem-fallback:      false;
 // Use the `respond-to()` mixin to use named breakpoints. Documentation is
 // available in the [Breakpoint wiki
 // pages](https://github.com/at-import/breakpoint/wiki/Respond-To).
-@include add-breakpoint(xs, (320px, 'no-query' true));
-@include add-breakpoint(xs-max,    (max-width 767px, 'no-query' true));
-@include add-breakpoint(m, (768px, 'no-query' true));
-@include add-breakpoint(m-max,   (max-width 960px, 'no-query' true));
-@include add-breakpoint(l, (961px, 'no-query' true));
-@include add-breakpoint(l-between, (961px 1440px, 'no-query' true));
-@include add-breakpoint(l-max,  (max-width 1440px, 'no-query' true));
-@include add-breakpoint(xl, (1441px, 'no-query' true));
+@include add-breakpoint(mobile, (max-width 950px, 'no-query' true));

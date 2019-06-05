@@ -3,12 +3,16 @@
 
 @import 'init/colors';
 @import 'init/fonts';
-@import 'init/image-url';
 @import 'init/variables';
 
 @import 'base/forms';
 @import 'base/root';
 
 @import 'components/home';
+@import 'components/search-form';
+@import 'components/current-positon';
+@import 'components/unit-switcher';
+@import 'components/week-forecast';
+@import 'components/error-page';
 @import 'components/weather';
 @import 'components/navigation';

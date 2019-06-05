@@ -1,0 +1,18 @@
+.week-forecast {
+  @include margin-top(40px);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+
+  .forecast-item {
+    @include font-size(16px);
+    text-align: center;
+
+    .wi {
+      @include font-size(48px);
+      @include margin(13px 0 20px);
+    }
+  }
+}

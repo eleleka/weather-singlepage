@@ -1,64 +1,32 @@
 .weather-pane {
   position: relative;
 
+  @include respond-to('mobile') {
+    width: 100%;
+  }
+
   .header-left {
     @include margin-bottom(46px);
-    @include padding-left(10px);
+    @include padding-left(4px);
     display: flex;
     align-items: center;
+
+    @include respond-to('mobile') {
+      align-items: normal;
+      flex-direction: column;
+      padding: 0;
+      margin: 0;
+    }
   }
 
   .city-name {
     @include font-size(48px);
     @include margin-left(40px);
     font-weight: weight(medium);
-  }
 
-  .unit-switcher {
-    @include spacing(top, 20px);
-    position: absolute;
-    right: 0;
-
-    #switcher {
-      display: none;
-
-      &:checked + label::after {
-        @include spacing(left, 54px);
-      }
-    }
-
-    label {
-      @include spacing(height, 32px);
-      @include spacing(width, 91px);
-      @include font-size(15px);
-      @include padding(5px 18px);
-      border: 1px solid $color-main;
-      border-radius: 40px;
-      cursor: pointer;
-      display: inline-block;
-      font-weight: weight(semibold);
-      position: relative;
-      text-align: right;
-
-      &::after {
-        @include spacing(height, 26px);
-        @include spacing(width, 32px);
-        @include spacing(top, 1px);
-        @include spacing(left, 1px);
-        background: $color-white;
-        border: 1px solid $color-main;
-        border-radius: 40px;
-        content: '';
-        position: absolute;
-        transition: left .2s ease-in-out;
-      }
-
-      &::before {
-        @include spacing(top, 5px);
-        @include spacing(left, 16px);
-        content: '°F';
-        position: absolute;
-      }
+    @include respond-to('mobile') {
+      @include font-size(38px);
+      @include margin(10px 0 0);
     }
   }
 
@@ -66,6 +34,10 @@
     @include font-size(44px);
     @include margin-bottom(8px);
     font-weight: weight(light);
+
+    @include respond-to('mobile') {
+      @include font-size(24px);
+    }
   }
 
   .weather-description {
@@ -73,95 +45,74 @@
     font-weight: weight(light);
     margin-bottom: 0;
     text-transform: capitalize;
+
+    @include respond-to('mobile') {
+      @include font-size(26px);
+    }
   }
 
   .temperature {
     @include font-size(138px);
-    @include margin-top(30px);
+    @include padding-top(28px);
     display: inline-block;
     line-height: 1;
     color: $color-rude;
     vertical-align: top;
+
+    @include respond-to('mobile') {
+      @include font-size(90px);
+      grid-area: temp;
+    }
   }
 
-  .weather-icon {
-    @include spacing(width, 200px);
-    @include spacing(height, 200px);
-    @include margin-left(80px);
-    background-size: contain;
-    background-repeat: no-repeat;
-    display: inline-block;
+  .weather-data {
+    display: grid;
+    grid-template-columns: 350px 291px 1fr;
 
-    &.icon-01d {
-      background-image: image-url('wi-day-sunny.png');
+    @include respond-to('mobile') {
+      grid-template-columns: 15rem 1fr;
+      grid-template-rows: auto;
+      grid-template-areas:
+        "temp icon"
+        "bottom bottom"
+    }
+  }
+
+  .current-weather-icon {
+    @include padding-top(28px);
+
+    @include respond-to('mobile') {
+      grid-area: icon;
     }
 
-    &.icon-02d {
-      background-image: image-url('wi-day-cloudy.png');
+    .wi {
+      @include font-size(137px);
+      color: $color-rude;
+
+      @include respond-to('mobile') {
+        @include font-size(90px);
+      }
+    }
+  }
+
+  .day-forecast {
+    @include font-size(25px);
+    @include margin-top(21px);
+    color: $color-rude;
+    list-style: none;
+    padding: 0;
+
+    @include respond-to('mobile') {
+      grid-area: bottom;
     }
 
-    &.icon-03d {
-      background-image: image-url('wi-cloud.png');
-    }
+    li {
+      line-height: 1.55;
 
-    &.icon-04d {
-      background-image: image-url('wi-cloudy.png');
-    }
-
-    &.icon-09d {
-      background-image: image-url('wi-rain.png');
-    }
-
-    &.icon-10d {
-      background-image: image-url('wi-day-rain.png');
-    }
-
-    &.icon-11d {
-      background-image: image-url('wi-thunderstorm.png');
-    }
-
-    &.icon-13d {
-      background-image: image-url('wi-snow.png');
-    }
-
-    &.icon-50d {
-      background-image: image-url('wi-fog.png');
-    }
-
-    &.icon-01n {
-      background-image: image-url('wi-night-clear.png');
-    }
-
-    &.icon-02n {
-      background-image: image-url('wi-night-alt-cloudy.png');
-    }
-
-    &.icon-03n {
-      background-image: image-url('wi-cloud.png');
-    }
-
-    &.icon-04n {
-      background-image: image-url('wi-cloudy.png');
-    }
-
-    &.icon-09n {
-      background-image: image-url('wi-rain.png');
-    }
-
-    &.icon-10n {
-      background-image: image-url('wi-night-alt-rain.png');
-    }
-
-    &.icon-11n {
-      background-image: image-url('wi-thunderstorm.png');
-    }
-
-    &.icon-13n {
-      background-image: image-url('wi-snow.png');
-    }
-
-    &.icon-50n {
-      background-image: image-url('wi-fog.png');
+      span {
+        display: inline-block;
+        width: spacing(130px);
+      }
     }
   }
 }

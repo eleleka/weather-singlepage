@@ -1,0 +1,64 @@
+.search-form {
+  @include spacing(max-width, 600px);
+  align-items: center;
+  flex-wrap: wrap;
+  display: flex;
+  flex: 0 0 auto;
+  position: relative;
+  width: 100%;
+
+  .input-name-city {
+    @include font-size(48px);
+    border-radius: 0;
+    font-weight: weight('semibold');
+    border: 0;
+    border-bottom: 2px solid $color-main;
+    color: $color-main;
+    flex: 1 1 auto;
+    text-align: center;
+
+    &.input-error {
+      border-color: $color-require;
+    }
+
+    &::-webkit-input-placeholder {
+      color: $color-placeholder;
+      text-align: center;
+    }
+
+    &::-moz-placeholder {
+      color: $color-placeholder;
+      text-align: center;
+    }
+
+    &:-ms-input-placeholder {
+      color: $color-placeholder;
+      text-align: center;
+    }
+  }
+
+  .form-submit {
+    @include margin-left(-43px);
+    background: none;
+    border: 0;
+    cursor: pointer;
+    flex: 0 0 auto;
+    font-size: 0;
+    padding: 0;
+
+    .icon-svg {
+      fill: $color-main;
+      width: spacing(40px);
+      height: spacing(40px);
+    }
+  }
+
+  .error {
+    @include font-size(18px);
+    bottom: spacing(-45px);
+    font-style: italic;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+  }
+}

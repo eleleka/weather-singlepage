@@ -21,15 +21,21 @@ html {
 }
 
 body {
-  @include spacing(min-width, 320px);
   @include font-size(14px);
   background: $color-gradient-top;
   background: linear-gradient(135deg, $color-gradient-top, $color-gradient-bottom);
-  line-height: 1.5;
-  min-height: 100vh;
-  font-family: $roboto;
   color: $color-main;
+  font-family: $roboto;
+  line-height: 1.5;
+  min-width: spacing(320px);
+  min-height: 100vh;
   position: relative;
+
+  @include respond-to('mobile') {
+    min-height: -webkit-fill-available;
+    display: flex;
+    align-items: center;
+  }
 }
 
 p {
@@ -37,21 +43,37 @@ p {
 }
 
 #root {
-  align-content: center;
+  @include padding(20px);
+  align-items: center;
   justify-content: center;
   display: flex;
   flex-wrap: wrap;
   min-height: 100vh;
+
+  @include respond-to('mobile') {
+    display: block;
+    width: 100%;
+    min-height: auto;
+  }
 }
 
 .container {
-  @include spacing(max-width, 1176px);
-  @include spacing(height, 680px);
   @include padding(32px 40px);
-  @include margin(20px);
   background: $color-white;
   box-shadow: 0 0 15px rgba(0, 0, 0, .4);
   flex: 1 1 auto;
+  height: spacing(680px);
+  max-width: spacing(1176px);
+
+  @include respond-to('mobile') {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    max-width: none;
+    height: auto;
+    width: 100%;
+    min-height: 300px;
+  }
 }
 
 .error {

@@ -1,0 +1,51 @@
+.unit-switcher {
+  position: absolute;
+  right: 0;
+  top: spacing(20px);
+
+  @include respond-to('mobile') {
+    top: spacing(10px);
+  }
+
+  #switcher {
+    display: none;
+
+    &:checked + label::after {
+      left: spacing(54px);
+    }
+  }
+
+  label {
+    @include font-size(15px);
+    @include padding(5px 18px);
+    border: 1px solid $color-main;
+    border-radius: spacing(40px);
+    cursor: pointer;
+    display: inline-block;
+    font-weight: weight(semibold);
+    height: spacing(32px);
+    width: spacing(91px);
+    position: relative;
+    text-align: right;
+
+    &::after {
+      background: $color-white;
+      border: 1px solid $color-main;
+      border-radius: spacing(40px);
+      content: '';
+      position: absolute;
+      top: spacing(1px);
+      bottom: spacing(1px);
+      left: spacing(1px);
+      width: spacing(32px);
+      transition: left .2s ease-in-out;
+    }
+
+    &::before {
+      content: '°F';
+      position: absolute;
+      top: spacing(5px);
+      left: spacing(16px);
+    }
+  }
+}

@@ -1,50 +1,8 @@
 .home-wrapper {
-  align-content: center;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  height: 100%;
-}
-
-.search-form {
-  @include spacing(max-width, 590px);
   align-items: center;
   display: flex;
-  flex: 1 1 auto;
-
-  .input-name-city {
-    @include font-size(48px);
-    font-weight: weight('semibold');
-    border: 0;
-    border-bottom: 2px solid $color-main;
-    color: $color-main;
-    flex: 1 1 auto;
-    text-align: center;
-
-    &::-webkit-input-placeholder {
-      color: $color-placeholder;
-      text-align: center;
-    }
-
-    &::-moz-placeholder {  /* Firefox 19+ */
-      color: $color-placeholder;
-      text-align: center;
-    }
-
-    &:-ms-input-placeholder {
-      color: $color-placeholder;
-      text-align: center;
-    }
-  }
-
-  .form-submit {
-    @include spacing(width, 30px);
-    @include spacing(height, 30px);
-    @include margin-left(-35px);
-    background: image-url('search.png') 0 0 no-repeat;
-    background-size: contain;
-    border: 0;
-    flex: 0 0 auto;
-    font-size: 0;
-  }
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
 }

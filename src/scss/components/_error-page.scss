@@ -1,0 +1,7 @@
+.error-page {
+  text-align: center;
+
+  h3 {
+    @include font-size(48px);
+  }
+}
