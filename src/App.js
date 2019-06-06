@@ -185,7 +185,8 @@ class App extends Component {
       let offSet = Math.ceil(tempsLength / 2);
       return day.temps[offSet - 1];
     });
-    const daysFiltered = daysTemp.shift();
+
+    daysTemp.shift();
 
     this.setState({
       days: daysTemp
