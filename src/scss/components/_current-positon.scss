@@ -3,6 +3,7 @@
   @include margin-top(30px);
   font-weight: weight('medium');
   line-height: 2.1;
+  min-width: spacing(280px);
   text-align: center;
 
   &::first-line {
